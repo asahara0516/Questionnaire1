@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志保さんの異変に関するアンケート</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>志保さんの異変に関するアンケート</h1>
+    <p>今日の志保さんの異変について、原因としてどれが最適だと思いますか？</p>
+    <button onclick="selectOption(1)">カフェイン摂取による影響</button>
+    <button onclick="selectOption(2)">生理の周期的リズムによる影響</button>
+    <button onclick="selectOption(3)">そのどちらも関係している</button>
+    <button onclick="selectOption(4)">そのどちらでもない</button>
+    <button onclick="selectOption(5)">カフェインと生理的リズムも関係しているが、そのほかの要素も複雑に絡んでいる</button>
+    <div id="result"></div>
+
+    <script>
+        function selectOption(option) {
+            const options = [
+                "カフェイン摂取による影響",
+                "生理の周期的リズムによる影響",
+                "そのどちらも関係している",
+                "そのどちらでもない",
+                "カフェインと生理的リズムも関係しているが、そのほかの要素も複雑に絡んでいる"
+            ];
+            document.getElementById('result').innerText = `あなたの選択: ${options[option - 1]}`;
+        }
+    </script>
+</body>
+</html>
